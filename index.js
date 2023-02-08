@@ -15,10 +15,17 @@ let controller = {
         view.displayMessge(
           `You sank all my battleships, in ${this.guesses} guesses`
         );
+        stopGame();
       }
     }
   },
 };
+
+function stopGame() {
+  document.getElementById("guess-input").disabled = true;
+  document.getElementById("fire-button").disabled = true;
+  console.log("i will stop the game!");
+}
 
 let view = {
   displayMessge: function (msg) {
